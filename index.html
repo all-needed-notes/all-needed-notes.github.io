@@ -1,8 +1,99 @@
 <!DOCTYPE html>
 <html>
-<body>
 
-<a href="https://all-needed-notes.com/book">Test </a> 
+<head>
+    <meta charset="UTF-8" charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все нужные ноты</title>
+    <style>
+        html {
+            -moz-text-size-adjust: none;
+            -webkit-text-size-adjust: none;
+            text-size-adjust: none;
+        }
+        /* Styling for mobile devices */
+        @media (max-width: 480px) {
+            body {
+                font-size: 16px;
+                line-height: 1.5;
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        /* Styling for larger screens */
+        @media (min-width: 481px) {
+            body {
+                font-size: 16px;
+                line-height: 1.8;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 30px;
+            }
+
+            h1 {
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+        }
+
+        /* General styles for all screens */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            font-weight: bold;
+            color: #0072c6;
+        }
+
+        a {
+            color: #0072c6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let scrollTop = localStorage.getItem('scrollTop');
+        if (scrollTop != null) {
+            document.documentElement.scrollTop = document.body.scrollTop = scrollTop;
+        }
+        function f() {
+            localStorage.setItem('scrollTop', document.documentElement.scrollTop || document.body.scrollTop);
+        }
+        addEventListener("scroll", (e) => { f() });
+    </script>
+
+    <p>Здравствуйте. На этом сайте вы можете <strong><a href="https://all-needed-notes.com/book">прочесть мою книгу.</a></strong>
+        <br>Больше тут пока ничего нет.
+    </p>
+    <p>
+        Телеграм <strong><a href="https://t.me/pokrov113km">@pokrov113km</a></strong>
+    </p>
+    <p>
+        Почта <strong><a href="https://t.me/pokrov113km">pokrov113km@protonmail.com</a></strong>
+    </p>
 
 </body>
+
 </html>
